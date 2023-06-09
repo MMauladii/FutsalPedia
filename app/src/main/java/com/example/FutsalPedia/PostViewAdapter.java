@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.FutsalPedia.databinding.PostItemBinding;
 
 import java.util.ArrayList;
@@ -40,7 +39,6 @@ public class PostViewAdapter extends RecyclerView.Adapter<PostViewAdapter.ViewHo
         holder.postItemBinding.tvUsername.setText(post.getUsername());
         holder.postItemBinding.tvContent.setText(post.getContent());
         holder.postItemBinding.tvCreatedDate.setText(post.getCreated_date());
-        Glide.with(holder.itemView).load(post.getFoto()).into(holder.postItemBinding.ivFoto);
 
 
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
