@@ -99,11 +99,12 @@ public class Post  implements Parcelable {
         this.username = username;
     }
 
-    public  String getFoto() {return foto; }
-
-    public void setFoto(String foto) { this.foto = foto; }
-
-    public int getTitle() {
-        return 0;
+    public String getFoto() {
+        return foto;
     }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
 }
