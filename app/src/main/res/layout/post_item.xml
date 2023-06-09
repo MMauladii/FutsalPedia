@@ -26,7 +26,7 @@
              android:src="@mipmap/ic_launcher"/>
 
             <TextView
-                android:id="@+id/tv_nama_lapangan"
+                android:id="@+id/tv_namalapangan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nama lapangan"
@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Content"
-                android:layout_below="@+id/tv_nama_lapangan"
+                android:layout_below="@+id/tv_namalapangan"
                 android:textSize="15sp"
                 android:layout_marginTop="15dp"/>
 
