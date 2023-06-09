@@ -32,7 +32,7 @@ public class UpdatePostActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String content = binding.etContent.getText().toString();
                 String foto = binding.etFoto.getText().toString();
-                String nama_lapangan = binding.etNamaLapangan.getText().toString();
+                String nama_lapangan = binding.etNamalapangan.getText().toString();
 
                 boolean bolehUpdatePost = true;
 

@@ -9,14 +9,12 @@ public class User implements Parcelable {
 
     private String id;
     private String username;
-    private String nama_lapangan;
     private String created_date;
     private String modified_date;
 
     protected User(Parcel in) {
         id = in.readString();
         username = in.readString();
-        nama_lapangan = in.readString();
         created_date = in.readString();
         modified_date = in.readString();
     }
@@ -49,14 +47,6 @@ public class User implements Parcelable {
         this.username = username;
     }
 
-    public String getNama_lapangan() {
-        return nama_lapangan;
-    }
-
-    public void setNama_lapangan(String nama_lapangan) {
-        this.nama_lapangan = nama_lapangan;
-    }
-
     public String getCreated_date() {
         return created_date;
     }
@@ -82,7 +72,6 @@ public class User implements Parcelable {
     public void writeToParcel(@NonNull Parcel dest, int flags) {
         dest.writeString(id);
         dest.writeString(username);
-        dest.writeString(nama_lapangan);
         dest.writeString(created_date);
         dest.writeString(modified_date);
     }

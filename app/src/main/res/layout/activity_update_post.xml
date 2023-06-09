@@ -30,7 +30,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_nama_lapangan"
+            android:id="@+id/til_namalapangan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:counterEnabled="true"
@@ -38,7 +38,7 @@
             app:counterMaxLength="180">
 
             <EditText
-                android:id="@+id/et_nama_lapangan"
+                android:id="@+id/et_namalapangan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama lapangan"
