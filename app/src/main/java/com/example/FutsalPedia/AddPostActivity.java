@@ -30,6 +30,8 @@ public class AddPostActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String content = binding.etContent.getText().toString();
                 String foto = binding.etFoto.getText().toString();
+                String nama_lapangan = binding.etNamaLapangan.getText().toString();
+
 
                 boolean bolehPost = true;
 
@@ -40,16 +42,16 @@ public class AddPostActivity extends AppCompatActivity {
 
                 if (bolehPost) {
                     String user_id = Utility.getValue(AddPostActivity.this, "xUsername");
-                    addPost(user_id, foto, content);
+                    addPost(user_id, foto, nama_lapangan, content);
                 }
             }
         });
     }
 
-    private void addPost(String user_id, String foto, String content) {
+    private void addPost(String user_id, String foto,String nama_lapangan, String content) {
         binding.progressBar.setVisibility(View.VISIBLE);
         APIService api = Utility.getRetrofit().create(APIService.class);
-        Call<ValueData> call = api.addPost( user_id, foto, content);
+        Call<ValueData> call = api.addPost( user_id, foto,nama_lapangan, content);
         call.enqueue(new Callback<ValueData>() {
             @Override
             public void onResponse(Call<ValueData> call, Response<ValueData> response) {

@@ -32,6 +32,7 @@ public class UpdatePostActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String content = binding.etContent.getText().toString();
                 String foto = binding.etFoto.getText().toString();
+                String nama_lapangan = binding.etNamaLapangan.getText().toString();
 
                 boolean bolehUpdatePost = true;
 
@@ -41,16 +42,16 @@ public class UpdatePostActivity extends AppCompatActivity {
                 }
 
                 if (bolehUpdatePost) {
-                    updatePost(id, foto, content);
+                    updatePost(id, foto, nama_lapangan, content);
                 }
             }
         });
     }
 
-    private void updatePost(String id, String foto, String content) {
+    private void updatePost(String id, String foto, String nama_lapangan, String content) {
         binding.progressBar.setVisibility(View.VISIBLE);
         APIService api = Utility.getRetrofit().create(APIService.class);
-        Call<ValueData> call = api.updatePost(id, foto, content);
+        Call<ValueData> call = api.updatePost(id, foto,nama_lapangan, content);
         call.enqueue(new Callback<ValueData>() {
             @Override
             public void onResponse(Call<ValueData> call, Response<ValueData> response) {

@@ -8,15 +8,15 @@ import androidx.annotation.NonNull;
 public class User implements Parcelable {
 
     private String id;
-//    private String foto;
     private String username;
+    private String nama_lapangan;
     private String created_date;
     private String modified_date;
 
     protected User(Parcel in) {
         id = in.readString();
-//        foto = in.readString();
         username = in.readString();
+        nama_lapangan = in.readString();
         created_date = in.readString();
         modified_date = in.readString();
     }
@@ -41,20 +41,20 @@ public class User implements Parcelable {
         this.id = id;
     }
 
-//    public String getFoto() {
-//        return foto;
-//    }
-
-//    public void setFoto(String foto) {
-//        this.foto = foto;
-//    }
-
     public String getUsername() {
         return username;
     }
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getNama_lapangan() {
+        return nama_lapangan;
+    }
+
+    public void setNama_lapangan(String nama_lapangan) {
+        this.nama_lapangan = nama_lapangan;
     }
 
     public String getCreated_date() {
@@ -81,8 +81,8 @@ public class User implements Parcelable {
     @Override
     public void writeToParcel(@NonNull Parcel dest, int flags) {
         dest.writeString(id);
-//        dest.writeString(foto);
         dest.writeString(username);
+        dest.writeString(nama_lapangan);
         dest.writeString(created_date);
         dest.writeString(modified_date);
     }

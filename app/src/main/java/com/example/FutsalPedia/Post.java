@@ -13,6 +13,7 @@ public class Post  implements Parcelable{
     private String modified_date;
     private String username;
     private String foto;
+    private String nama_lapangan;
 
     protected Post(Parcel in) {
         id = in.readString();
@@ -22,6 +23,7 @@ public class Post  implements Parcelable{
         modified_date = in.readString();
         username = in.readString();
         foto = in.readString();
+        nama_lapangan = in.readString();
     }
 
     public static final Creator<Post> CREATOR = new Creator<Post>() {
@@ -90,6 +92,13 @@ public class Post  implements Parcelable{
 
     public void setFoto(String foto) {
         this.foto = foto;
+    }
+
+    public String getNama_lapangan() {
+        return nama_lapangan;
+    }
+
+    public void setNama_lapangan(String nama_lapangan) { this.nama_lapangan = nama_lapangan;
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.example.FutsalPedia;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -17,7 +18,7 @@ public interface APIService {
 
     @FormUrlEncoded
     @POST("auth/login")
-    Call<ValueData<User>> login(@Field("username") String usernme,
+    Call<ValueData<User>> login(@Field("username") String username,
                                 @Field("password") String password);
 
     @FormUrlEncoded
@@ -28,15 +29,17 @@ public interface APIService {
     @FormUrlEncoded
     @POST("post")
     Call<ValueData> addPost(@Field("user_id") String user_id,
+                            @Field("nama_lapangan") String nama_lapangan,
                             @Field("foto") String foto,
                             @Field("content") String content);
 
     @FormUrlEncoded
     @PUT("post")
     Call<ValueData> updatePost(@Field("id") String id,
+                               @Field("nama_lapangan") String nama_lapangan,
                                @Field("foto") String foto,
                                @Field("content") String content);
 
-    @POST("post/{id}")
+    @DELETE("post/{id}")
     Call<ValueData> deletePost(@Path("id") String id);
 }
