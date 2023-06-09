@@ -15,16 +15,16 @@ import java.util.List;
 public class PostViewAdapter extends RecyclerView.Adapter<PostViewAdapter.ViewHolder> {
 
     private List<Post> data = new ArrayList<>();
-//    private OnItemLongClickListener onItemLongClickListener; //update post
+     private OnItemLongClickListener onItemLongClickListener;
 
     public void setData(List<Post> data) {
         this.data = data;
         notifyDataSetChanged();
     }
 
-//    public void setOnItemLongClickListener(OnItemLongClickListener onItemLongClickListener) { //update post
-//        this.onItemLongClickListener = onItemLongClickListener;
-//    }
+    public void setOnItemLongClickListener(OnItemLongClickListener onItemLongClickListener) { //update post
+        this.onItemLongClickListener = onItemLongClickListener;
+    }
 
     @NonNull
     @Override
@@ -43,13 +43,13 @@ public class PostViewAdapter extends RecyclerView.Adapter<PostViewAdapter.ViewHo
 
 
 
-//        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-//            @Override
-//            public boolean onLongClick(View v) {
-//                onItemLongClickListener.onItemLongClick(v, pos);
-//                return false;
-//            }
-//        });
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                onItemLongClickListener.onItemLongClick(v, pos);
+                return false;
+            }
+        });
 
     }
 
@@ -57,6 +57,7 @@ public class PostViewAdapter extends RecyclerView.Adapter<PostViewAdapter.ViewHo
     public int getItemCount() {
         return data.size();
     }
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -67,8 +68,8 @@ public class PostViewAdapter extends RecyclerView.Adapter<PostViewAdapter.ViewHo
         }
     }
 
-//    public interface OnItemLongClickListener {
-//        void onItemLongClick(View v, int position);
-//    }
+    public interface OnItemLongClickListener {
+        void onItemLongClick(View v, int position);
+    }
 }
 

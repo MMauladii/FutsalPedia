@@ -18,12 +18,12 @@
             android:name=".UpdatePostActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.FutsalPedia"/>
+            android:theme="@style/Theme.FutsalPedia.ActionBar"/>
         <activity
             android:name=".AddPostActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.FutsalPedia" />
+            android:theme="@style/Theme.FutsalPedia.ActionBar" />
         <activity
             android:name=".LoginActivity"
             android:exported="false"
@@ -31,7 +31,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.FutsalPedia" />
+            android:theme="@style/Theme.FutsalPedia.ActionBar" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false"
