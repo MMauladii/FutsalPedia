@@ -6,6 +6,7 @@
     </style>
 
     <style name="Base.Theme.FutsalPedia.ActionBar" parent="Theme.Material3.DayNight">
+
         <!-- Customize your theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
