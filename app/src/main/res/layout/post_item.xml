@@ -19,12 +19,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:id="@+id/iv_foto"
-                android:src="@mipmap/ic_launcher"/>
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:id="@+id/iv_foto"-->
+<!--                android:src="@mipmap/ic_launcher"/>-->
 
+            <TextView
+                android:id="@+id/tv_foto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UrlFoto"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tv_username"
@@ -32,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="Username"
                 android:textSize="18sp"
-                android:layout_marginTop="228dp"
+                android:layout_marginTop="200dp"
                 android:textStyle="bold"/>
 
             <TextView

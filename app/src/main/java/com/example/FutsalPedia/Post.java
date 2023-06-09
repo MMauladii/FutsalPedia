@@ -3,14 +3,15 @@ package com.example.FutsalPedia;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Post  implements Parcelable {
+import androidx.annotation.NonNull;
+
+public class Post  implements Parcelable{
     private String id;
     private String content;
     private String user_id;
     private String created_date;
     private String modified_date;
     private String username;
-
     private String foto;
 
     protected Post(Parcel in) {
@@ -21,22 +22,6 @@ public class Post  implements Parcelable {
         modified_date = in.readString();
         username = in.readString();
         foto = in.readString();
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(id);
-        dest.writeString(content);
-        dest.writeString(user_id);
-        dest.writeString(created_date);
-        dest.writeString(modified_date);
-        dest.writeString(username);
-        dest.writeString(foto);
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
     }
 
     public static final Creator<Post> CREATOR = new Creator<Post>() {
@@ -107,4 +92,19 @@ public class Post  implements Parcelable {
         this.foto = foto;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(content);
+        dest.writeString(user_id);
+        dest.writeString(created_date);
+        dest.writeString(modified_date);
+        dest.writeString(username);
+        dest.writeString(foto);
+    }
 }

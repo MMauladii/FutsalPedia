@@ -11,9 +11,9 @@ import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface APIService {
-    @FormUrlEncoded
+//    @FormUrlEncoded
     @GET("post")
-    Call<ValueData<List<Post>>> getPost();
+    Call<ValueData<List<Post>>>getPost();
 
     @FormUrlEncoded
     @POST("auth/login")

@@ -15,16 +15,16 @@ import java.util.List;
 public class PostViewAdapter extends RecyclerView.Adapter<PostViewAdapter.ViewHolder> {
 
     private List<Post> data = new ArrayList<>();
-    private OnItemLongClickListener onItemLongClickListener;
+//    private OnItemLongClickListener onItemLongClickListener; //update post
 
     public void setData(List<Post> data) {
         this.data = data;
         notifyDataSetChanged();
     }
 
-    public void setOnItemLongClickListener(OnItemLongClickListener onItemLongClickListener) {
-        this.onItemLongClickListener = onItemLongClickListener;
-    }
+//    public void setOnItemLongClickListener(OnItemLongClickListener onItemLongClickListener) { //update post
+//        this.onItemLongClickListener = onItemLongClickListener;
+//    }
 
     @NonNull
     @Override
@@ -36,18 +36,20 @@ public class PostViewAdapter extends RecyclerView.Adapter<PostViewAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         int pos = holder.getAdapterPosition();
         Post post = data.get(pos);
+        holder.postItemBinding.tvFoto.setText(post.getFoto());
         holder.postItemBinding.tvUsername.setText(post.getUsername());
         holder.postItemBinding.tvContent.setText(post.getContent());
         holder.postItemBinding.tvCreatedDate.setText(post.getCreated_date());
 
 
-        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                onItemLongClickListener.onItemLongClick(v, pos);
-                return false;
-            }
-        });
+
+//        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                onItemLongClickListener.onItemLongClick(v, pos);
+//                return false;
+//            }
+//        });
 
     }
 
@@ -65,8 +67,8 @@ public class PostViewAdapter extends RecyclerView.Adapter<PostViewAdapter.ViewHo
         }
     }
 
-    public interface OnItemLongClickListener {
-        void onItemLongClick(View v, int position);
-    }
+//    public interface OnItemLongClickListener {
+//        void onItemLongClick(View v, int position);
+//    }
 }
 
