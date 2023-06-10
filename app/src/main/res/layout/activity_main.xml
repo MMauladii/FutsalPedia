@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#DDFFBB"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -31,7 +32,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:src="@drawable/ic_add_24"
         app:tint="@color/white"
-        app:backgroundTint="@color/purple_500"
+        app:backgroundTint="#7AA874"
         android:layout_margin="16dp"/>
 
 
