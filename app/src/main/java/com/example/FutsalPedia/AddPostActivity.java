@@ -28,9 +28,10 @@ public class AddPostActivity extends AppCompatActivity {
         binding.btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String content = binding.etContent.getText().toString();
-                String foto = binding.etFoto.getText().toString();
                 String nama_lapangan = binding.etNamaLapangan.getText().toString();
+                String foto = binding.etFoto.getText().toString();
+                String content = binding.etContent.getText().toString();
+
 
 
                 boolean bolehPost = true;
@@ -41,20 +42,20 @@ public class AddPostActivity extends AppCompatActivity {
                 }
 
                 if (bolehPost) {
-                    String user_id = Utility.getValue(AddPostActivity.this, "xUsername");
-                    addPost(user_id, foto, nama_lapangan, content);
+                    String user_id = Utility.getValue(AddPostActivity.this, "xUserId");
+                    addPost(user_id, nama_lapangan, foto,  content);
                 }
             }
         });
     }
 
-    private void addPost(String user_id, String foto,String nama_lapangan, String content) {
+    private void addPost(String user_id,String nama_lapangan, String foto, String content) {
         binding.progressBar.setVisibility(View.VISIBLE);
         APIService api = Utility.getRetrofit().create(APIService.class);
-        Call<ValueData> call = api.addPost( user_id, foto,nama_lapangan, content);
-        call.enqueue(new Callback<ValueData>() {
+        Call<ValueNoData> call = api.addPost( user_id, nama_lapangan, foto, content);
+        call.enqueue(new Callback<ValueNoData>() {
             @Override
-            public void onResponse(Call<ValueData> call, Response<ValueData> response) {
+            public void onResponse(Call<ValueNoData> call, Response<ValueNoData> response) {
                 binding.progressBar.setVisibility(View.GONE);
                 if (response.code() == 200) {
                     int success = response.body().getSuccess();
@@ -72,7 +73,7 @@ public class AddPostActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<ValueData> call, Throwable t) {
+            public void onFailure(Call<ValueNoData> call, Throwable t) {
                  binding.progressBar.setVisibility(View.GONE);
                  System.out.println("Retrofit Error : " + t.getMessage());
                 Toast.makeText(AddPostActivity.this, "Retrofit Error : " + t.getMessage(), Toast.LENGTH_SHORT).show();

@@ -28,14 +28,14 @@ public interface APIService {
 
     @FormUrlEncoded
     @POST("post")
-    Call<ValueData> addPost(@Field("user_id") String user_id,
+    Call<ValueNoData> addPost(@Field("user_id") String user_id,
                             @Field("nama_lapangan") String nama_lapangan,
                             @Field("foto") String foto,
                             @Field("content") String content);
 
     @FormUrlEncoded
     @PUT("post")
-    Call<ValueData> updatePost(@Field("id") String id,
+    Call<ValueNoData> updatePost(@Field("id") String id,
                                @Field("nama_lapangan") String nama_lapangan,
                                @Field("foto") String foto,
                                @Field("content") String content);
