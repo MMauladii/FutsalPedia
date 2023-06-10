@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#434242"
+    tools:context=".Detailactivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/iv_foto"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_namalapangan"
+            android:text="Nama Lapangan"
+            android:padding="6dp"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            style="@style/TextAppearance.AppCompat.Large"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi"
+            android:textColor="#FFFFFF"
+            android:id="@+id/tv_title_deskripsi"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_deskripsi"
+            android:textColor="#FFFFFF"
+            android:text="Deskripsi"
+            android:layout_marginTop="15dp"
+            android:textSize="18dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
