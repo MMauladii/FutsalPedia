@@ -14,10 +14,6 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Detailactivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity"/>
-        <activity
             android:name=".UpdatePostActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"

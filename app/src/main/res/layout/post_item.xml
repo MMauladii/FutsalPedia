@@ -2,18 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#EBB02D"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#EBB02D"
         app:cardCornerRadius="4dp"
         app:cardElevation="0.7dp"
         app:cardMaxElevation="1dp"
         app:cardPreventCornerOverlap="true"
-        app:cardBackgroundColor="#F7DB6A"
+        app:cardBackgroundColor="#9DC08B"
         android:layout_margin="8dp"
         app:contentPadding="16dp">
 
