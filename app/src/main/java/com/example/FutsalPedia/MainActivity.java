@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         binding.rvPost.setLayoutManager(new LinearLayoutManager(this));
         binding.rvPost.setAdapter(postViewAdapter);
 
-        postViewAdapter.setOnItemLongClickListener(new PostViewAdapter.OnItemLongClickListener() { //pake pas nak nganui post data
+        postViewAdapter.setOnItemLongClickListener(new PostViewAdapter.OnItemLongClickListener() {
            @Override
             public void onItemLongClick(View v, int position) {
                PopupMenu popupMenu = new PopupMenu(MainActivity.this, v);

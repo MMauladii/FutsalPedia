@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:counterEnabled="true"
-            app:counterMaxLength="180">
+            app:counterMaxLength="500">
 
             <EditText
                 android:id="@+id/et_foto"
@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:hint="foto"
                 android:inputType="none"
-                android:maxLength="180"/>
+                android:maxLength="500"/>
 
 
         </com.google.android.material.textfield.TextInputLayout>

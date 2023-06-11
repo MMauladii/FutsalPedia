@@ -73,7 +73,8 @@
             android:id="@+id/btn_update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Post"
+            android:background="#7AA874"
+            android:text="Update Post"
             android:layout_alignParentEnd="true"
             android:layout_below="@+id/til_content"
             android:layout_marginTop="16dp"/>
