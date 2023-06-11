@@ -27,7 +27,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_username"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#3E7AA774">
 
             <EditText
                 android:id="@+id/et_username"
@@ -43,7 +44,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#3E7AA774">
 
             <EditText
                 android:id="@+id/et_password"
@@ -69,6 +71,7 @@
             style="@style/Widget.Material3.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#FF0000"
             android:text="Belum Punya akun? Silahkan Register terlebih dahulu!"
             android:textAllCaps="false"
             android:textSize="14sp"/>
