@@ -14,10 +14,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
+        <activity
             android:name=".UpdatePostActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.FutsalPedia.ActionBar"/>
+            android:theme="@style/Theme.FutsalPedia.ActionBar" />
         <activity
             android:name=".AddPostActivity"
             android:exported="false"

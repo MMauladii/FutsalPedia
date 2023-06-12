@@ -183,7 +183,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-
+        if (item.getItemId() == R.id.menu_about) {
+            startActivity(new Intent(MainActivity.this, AboutActivity.class));
+            return super.onOptionsItemSelected(item);
+        }
         if (id == R.id.action_logout){
             Utility.clearUser(this);
             Intent intent = new Intent(this, LoginActivity.class);
