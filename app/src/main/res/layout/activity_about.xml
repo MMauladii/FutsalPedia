@@ -46,7 +46,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="MUHAMMAD MAULADI Sebagai Ketua Kelompok"
+        android:text="MUHAMMAD MAULADI Sebagai Ketua "
         android:textSize="15dp"
         android:textAlignment="center"
         android:layout_marginTop="370dp"
